@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 export function NewTodoForm({ onSubmit }) {
   const [newItem, setNewItem] = useState("");
@@ -26,3 +27,7 @@ export function NewTodoForm({ onSubmit }) {
     </form>
   );
 }
+
+NewTodoForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
